@@ -5,13 +5,14 @@ class QPX{
 		this.key = key;
 	};
 	getInfo(body, callback){
+		let strBody = JSON.stringify(body);
 		let data = '';
 		const options = {
 			host : 'www.googleapis.com',
 			method : 'POST',
 			path : '/qpxExpress/v1/trips/search?key=' + this.key,
 			headers : { 'Content-Type': 'application/json' },
-			'content-length' : body.length 
+			'content-length' : strBody.length 
 		};
 
 		let request = https.request(options, (response)=>{
@@ -29,7 +30,7 @@ class QPX{
 			callback(error, {});
 		});
 
-		request.write(body);
+		request.write(strBody);
 		request.end();
 	}
 };
