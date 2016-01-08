@@ -1,6 +1,6 @@
 {
   "name": "qpx-express",
-  "version": "16.1.9",
+  "version": "16.1.10",
   "description": "qpx-express node driver",
   "main": "./app/qpx.js",
   "repository": {
