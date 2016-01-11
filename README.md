@@ -1,5 +1,3 @@
-##### setting it up :)
-
 ```js
 var API = require('qpx-express');
 
@@ -26,6 +24,11 @@ var body = {
 qpx.getInfo(body, function(error, data){
 	console.log('Heyy!', data);
 });
+```
+## Installation
+
+```bash
+$ npm install qpx-express
 ```
 More details about QPX-Express? 
 [`FAQ`](https://developers.google.com/qpx-express/faq)
